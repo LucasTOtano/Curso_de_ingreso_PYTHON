@@ -7,8 +7,8 @@ import random
 
 
 '''
-nombre:
-apellido:
+nombre: Lucas Thomas
+apellido: Otaño
 ---
 Ejercicio: if_10
 ---
@@ -32,8 +32,13 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass  
-            
+        numero_aleatorio = random.randint(1,10)
+        if numero_aleatorio >= 6:
+            alert("Resultado",f"Promoción directa, la nota es {numero_aleatorio}")
+        elif numero_aleatorio >=4:
+            alert("Resultado",f"Aprobado, la nota es {numero_aleatorio}")
+        elif numero_aleatorio <=3:
+            alert("Resultado",f"Desaprobado, la nota es {numero_aleatorio}")
 
 if __name__ == "__main__":
     app = App()
